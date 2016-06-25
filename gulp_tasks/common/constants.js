@@ -120,11 +120,11 @@ module.exports = function() {
             }
         },
         serve: {
-            host: 'localhost', //'0.0.0.0',
-            port: 5000,
+            host: process.env.IP || "0.0.0.0", //'0.0.0.0',
+            port: process.env.PORT || 5000,
             https: false,
             open: true,
-            browser: ['google chrome'], // ['google chrome', 'firefox'],
+            browser: false, //['google chrome'], ['google chrome', 'firefox'],
             localtunnel: false, // true, false or 'todo_app'
             ghostMode: {
                 clicks: false,
